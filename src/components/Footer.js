@@ -2,6 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
+        // Esta es la seecion del footer, le agregué en un tipo card y contiene un input y un boton para suscribirse
         <div className="footer">
             <div className="container mt-4 mb-4">
                 <div className="row">
