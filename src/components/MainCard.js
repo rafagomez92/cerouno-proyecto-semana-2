@@ -9,19 +9,13 @@ function MainCard(props) {
             {/* Seccion donde esta ingresado bloc y el buscador */}
             <div className="text-blog-search">
                 <div className="container-fluid">                    
-                    <div className="row justify-content-around">
-                        {/* En esta parte de código nos sirve para alinear a la deracha nuestro h4 */}
-                        <div className="col-4 text-right">                            
-                            <h4>Blog</h4>
-                        </div>
-                        <div className="col-4">
-                            {/* Este es el código del buscador */}
-                            <form className="form-inline">
-                                <input className="form-control mr-sm-2" type="search" placeholder="Buscador" aria-label="Search"/>
-                                <button className="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
-                            </form>
-                        </div>
-                    </div>                    
+                <div className="container mt-4 mb-4">
+                <div className="row">
+                    <div className="col-md-6 offset-md-3">
+                        <h1 className="text-center text-warning">Blog</h1>
+                </div>            
+                </div>            
+                </div>            
                 </div>            
             </div>                            
             {/* Esta es la segunda parte del código donde se ingresa el blog principal */}
@@ -37,10 +31,19 @@ function MainCard(props) {
                         </div>
                         <div className="col-md-8 text-white bg-dark">
                         <div className="card-body ">
+                            <h6 className="categories"><img src="https://image.flaticon.com/icons/svg/148/148947.svg" weight="15" height="15"/>&nbsp;{props.category}</h6>                        
                             <h1 className="card-title">{props.title}</h1>
-                            <p className="card-text">{props.subtitle}</p>
+                            <p className="card-text">{props.subtitle}</p>                            
                             {/* El boton es el unico elemento de este card que no utilice props */}
-                            <button type="button" className="btn btn-warning text-white">Ingresar</button>
+                            <button type="button" className="btn btn-warning text-white mb-2">Ingresar</button>
+                            <p className="text text-left">
+                                <img src="https://image.flaticon.com/icons/svg/1100/1100803.svg" weight="15" height="15"/>
+                                &nbsp;{props.date}                            
+                            </p>
+                            <p className="text text-left">
+                                <img src="https://image.flaticon.com/icons/svg/1077/1077012.svg" weight="15" height="15"/>
+                                &nbsp;{props.author}
+                            </p>                                                
                         </div>
                         </div>
                     </div>
