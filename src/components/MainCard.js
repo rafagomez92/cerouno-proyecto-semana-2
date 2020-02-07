@@ -32,12 +32,14 @@ function MainCard(props) {
                   <div className="card mb-3">
                     <div className="row no-gutters">
                         <div className="col-md-4">
+                            {/* En esta sección he utilizado los props ingresados en el js de App */}
                             <img src={props.imgUrl} className="card-img" alt="..."/>
                         </div>
                         <div className="col-md-8 text-white bg-dark">
                         <div className="card-body ">
                             <h1 className="card-title">{props.title}</h1>
-                            <p className="card-text">{props.subtitle}</p>        
+                            <p className="card-text">{props.subtitle}</p>
+                            {/* El boton es el unico elemento de este card que no utilice props */}
                             <button type="button" className="btn btn-warning text-white">Ingresar</button>
                         </div>
                         </div>
